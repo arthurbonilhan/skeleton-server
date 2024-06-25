@@ -1,3 +1,7 @@
+import express from 'express'
+import cors from 'cors'
+import dotenv from 'dotenv'
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
@@ -6,8 +10,12 @@ const formularioRoutes = require('./routes/formulario')
 require('dotenv').config()
 
 const app = express()
-app.use(bodyParser.json())
 app.use(cors())
+dotenv.config()
+app.use(bodyParser.json())
+
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 const mongoURI = process.env.MONGO_URI
 mongoose
@@ -17,4 +25,7 @@ mongoose
 
 app.use('/formulario', formularioRoutes)
 
-module.exports = app
+// module.exports = app
+app.listen(process.env.port || 3333)
+
+export default app
