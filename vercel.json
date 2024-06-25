@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/formulario/captacao",
+      "destination": "/api/formulario/captacao"
+    }
+  ]
+}
