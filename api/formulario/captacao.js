@@ -1,11 +1,9 @@
-import { connectToDatabase } from '../utils/mongodb'
-import { validationResult, body } from 'express-validator'
-import express from 'express'
-import cors from 'cors'
+const express = require('express')
+const { validationResult, body } = require('express-validator')
+const { connectToDatabase } = require('../utils/mongodb')
 
 const app = express()
 app.use(express.json())
-app.use(cors())
 
 const clienteSchema = {
   tipoServico: String,
@@ -48,4 +46,4 @@ app.get('/formulario/captacao', async (req, res) => {
   res.json(clientes)
 })
 
-export default app
+module.exports = app
