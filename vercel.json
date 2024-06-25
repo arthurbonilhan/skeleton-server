@@ -1,8 +1,10 @@
 {
-  "rewrites": [
-    {
-      "source": "/formulario/captacao",
-      "destination": "/api/formulario/captacao"
+  "functions": {
+    "api/formulario/captacao": {
+      "handler": "api/formulario/captacao.js",
+      "environment": {
+        "MONGO_URI": "@mongo-uri"
+      }
     }
-  ]
+  }
 }
