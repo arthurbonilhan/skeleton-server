@@ -1,14 +1,12 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
 const clienteSchema = new mongoose.Schema({
-  tipoServico: String,
-  nome: String,
-  telefone: String,
-  email: String,
-  cidade: String,
-  quantidadeMetros: Number,
+  tipoServico: { type: String, required: true },
+  nome: { type: String, required: true },
+  telefone: { type: String, required: true },
+  email: { type: String, required: true },
+  cidade: { type: String, required: true },
+  quantidadeMetros: { type: Number, required: true },
 })
 
-const Cliente = mongoose.model('Cliente', clienteSchema)
-
-module.exports = Cliente
+module.exports = mongoose.model('Cliente', clienteSchema)

@@ -2,15 +2,23 @@
   "name": "my-vercel-app",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "dependencies": {
-    "express": "^4.17.1",
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express-validator": "^6.10.0",
-    "mongoose": "^5.10.0"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "mongoose": "^8.4.4"
   },
   "scripts": {
-    "start": "node ./src/index.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": "https://github.com/arthurbonilhan/skeleton-server.git",
+  "author": "Arthur Bonilha <arthurbonilhan@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
