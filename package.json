@@ -11,6 +11,6 @@
     "mongoose": "^5.10.0"
   },
   "scripts": {
-    "start": "node api/index.js"
+    "start": "node ./src/index.js"
   }
 }
