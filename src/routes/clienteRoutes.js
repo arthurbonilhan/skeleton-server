@@ -1,6 +1,6 @@
-import express from 'express'
-import { body } from 'express-validator'
-import clienteController from '../controllers/clienteController'
+const express = require('express')
+const { body } = require('express-validator')
+const clienteController = require('../controllers/clienteController')
 
 const router = express.Router()
 
@@ -19,4 +19,4 @@ router.post(
 
 router.get('/captacao', clienteController.getAllClientes)
 
-export default router
+module.exports = router

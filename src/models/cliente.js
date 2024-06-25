@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
 const clienteSchema = new mongoose.Schema({
   tipoServico: { type: String, required: true },

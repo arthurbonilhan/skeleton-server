@@ -1,5 +1,5 @@
-import app from './app'
-import connectDB from './config/database'
+const app = require('./app')
+const connectDB = require('./config/database')
 
 const PORT = process.env.PORT || 5000
 
