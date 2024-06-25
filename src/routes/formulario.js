@@ -1,9 +1,8 @@
 const express = require('express')
 const { body, validationResult } = require('express-validator')
-const Cliente = require('../models/Cliente')
+const Cliente = require('../models/cliente')
 const router = express.Router()
 
-// Endpoint para capturar dados do formulário com validação
 router.post(
   '/captacao',
   [
@@ -29,7 +28,6 @@ router.post(
   }
 )
 
-// Endpoint para listar todos os dados capturados
 router.get('/captacao', async (req, res) => {
   const clientes = await Cliente.find()
   res.json(clientes)
